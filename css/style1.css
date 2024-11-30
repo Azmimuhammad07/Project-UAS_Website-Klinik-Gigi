@@ -304,6 +304,8 @@ transform: scale(1.2); /* Biar icon membesar pas dihover */
     color: #55a8f5; /* Warna saat hover */
     transition: 0.3s; /* Smooth effect */
 }
+
+
 /* home end */
 
 /* about us */
@@ -900,48 +902,52 @@ transform: scale(1.2); /* Biar icon membesar pas dihover */
 
 /* team section ends */
 
-.pricing{
-    background: var(--white)
+/* Pricing Start */
+
+.pricing {
+    background: var(--white);
 }
 
-.pricing .box-container{
+.pricing .box-container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    overflow-x: auto;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .service-card {
+.box-container .service-card {
+    flex: 0 0 auto;
     width: 300px;
+    scroll-snap-align: center;
+}
+
+/* Styles for individual service cards */
+
+.service-card {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     background-color: #f9f9f9;
-    margin: 20px auto;
     text-align: center;
+    margin: auto;
+}
 
-  }
-  
-  .service-image {
+.service-image {
     position: relative;
-  }
-  
-  .service-image img {
+}
+
+.service-image img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
-  }
-  
-  .service-image img:hover {
+}
+
+.service-image img:hover {
     transform: scale(1.1);
-  }
-  .service-image .price {
+}
+
+.service-image .price {
     position: absolute;
     bottom: -15px;
     left: 50%;
@@ -953,49 +959,51 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-content {
+}
+
+.service-content {
     padding: 20px;
-  }
-  
-  .service-content h3 {
+}
+
+.service-content h3 {
     font-size: 20px;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
-  }
-  
-  .service-content hr {
+}
+
+.service-content hr {
     border: none;
     border-top: 1px solid #ddd;
     margin: 10px 0;
-  }
-  
-  .service-content ul {
+}
+
+.service-content ul {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: left;
-  }
-  
-  .service-content ul li {
+}
+
+.service-content ul li {
     font-size: 14px;
     margin: 8px 0;
     color: #555;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .service-content ul li .checkmark {
+}
+
+.service-content ul li .checkmark {
     color: #007bff;
     font-size: 16px;
-  }
-  .appointment-button{
+}
+
+.appointment-button {
     margin-top: 15px;
-  }
-  .appointment-button a{
+}
+
+.appointment-button a {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 14px;
@@ -1006,11 +1014,11 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .appointment-button a:hover {
+}
+
+.appointment-button a:hover {
     background-color: #0056b3;
-  }
+}
 
 
 /* pricing plan ends */
